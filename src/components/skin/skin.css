@@ -1,0 +1,57 @@
+.skin {
+    background-color: var(--backgroundColorSkin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    border: 2px solid var(--borderSkin);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.skin p {
+    width: 100%;
+    text-align: start;
+
+    /* background-color: black; */
+}
+
+.skin section {
+    /* background-color: black; */
+    width: 90%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skin input {
+    margin: 0;
+    height: 16px;
+    width: 16px;
+    position: relative;
+    appearance: none;
+    outline: 2px solid var(--borderSkin);
+    border: none;
+    border-radius: 50%;
+}
+
+.skin input::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    background-color: var(--textSkin);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.skin input:checked::before {
+    opacity: 1; /* Появление точки при выборе */
+}

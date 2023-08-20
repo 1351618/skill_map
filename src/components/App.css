@@ -1,0 +1,45 @@
+/* ! ============================= */
+/* ! глобальные переменные, шрифты */
+/* ! ============================= */
+
+.App.darkClassical {
+    text-align: center;
+    --borderSkin: #ffffff;
+    --textSkin: #ffffff;
+    --backgroundColorSkin: #000000;
+}
+.App.lightClassical {
+    text-align: center;
+    --borderSkin: #000000;
+    --textSkin: #000000;
+    --backgroundColorSkin: #ffffff;
+}
+
+.App.darkGame {
+    text-align: center;
+    --borderSkin: #ff0000;
+    --textSkin: #ff0202;
+    --backgroundColorSkin: #001885;
+}
+.App.lightGame {
+    text-align: center;
+    --borderSkin: #0033ff;
+    --textSkin: #0033ff;
+    --backgroundColorSkin: #cddd6c;
+}
+.App {
+    background-color: var(--backgroundColorSkin);
+    padding: 0.1vw;
+}
+
+.App-content {
+    background-color: var(--backgroundColorSkin);
+    border: 1px solid var(--borderSkin);
+    border-radius: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
