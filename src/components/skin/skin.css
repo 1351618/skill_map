@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: 300px;
-    border: 2px solid var(--borderSkin);
+    border: 1px solid var(--borderSkin);
     padding: 10px;
     border-radius: 5px;
 }

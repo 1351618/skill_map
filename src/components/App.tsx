@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Skin from "./skin/skin";
+
 import { getData } from "../local_storage/local_storage";
 import User from "./user/user";
 
@@ -41,7 +41,6 @@ function App() {
                     }`}
                 >
                     <User />
-                    <Skin />
                 </div>
 
                 <div

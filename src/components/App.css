@@ -6,7 +6,7 @@
     text-align: center;
     --borderSkin: #ffffff;
     --textSkin: #ffffff;
-    --backgroundColorSkin: #000000;
+    --backgroundColorSkin: #212121;
 }
 .App.lightClassical {
     text-align: center;
@@ -52,7 +52,7 @@
 }
 
 .App-content__user.hidden {
-    left: -82px;
+    left: -86px;
 }
 
 .App-content__navigation {
