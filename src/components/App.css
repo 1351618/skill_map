@@ -30,16 +30,113 @@
 .App {
     background-color: var(--backgroundColorSkin);
     padding: 0.1vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .App-content {
     background-color: var(--backgroundColorSkin);
     border: 1px solid var(--borderSkin);
     border-radius: 10px;
-    min-height: 100vh;
+    min-height: 99.8vh;
+    font-size: calc(10px + 2vmin);
+    overflow: hidden;
+    position: relative;
+}
+/* *  *  *  *  * меню *  *  *  *   */
+.App-content__user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 1s ease-in-out;
+}
+
+.App-content__user.hidden {
+    left: -82px;
+}
+
+.App-content__navigation {
+    position: absolute;
+    border: 1px solid var(--borderSkin);
+    border-radius: 10px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 50px;
+    transition: bottom 1s ease-in-out;
+}
+
+.App-content__navigation.hidden {
+    bottom: -45px;
+}
+
+.button-hide-show-menu {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid var(--borderSkin);
+    border-radius: 5px;
+    background-color: var(--backgroundColorSkin);
+    cursor: pointer;
+    z-index: 5;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
+}
+.button-hide-show-menu span {
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    background-color: var(--borderSkin);
+}
+
+.button-hide-show-menu span:nth-child(1) {
+    transform: rotate(0deg);
+    top: 22%;
+    transition: top 0.3s ease-in-out;
+}
+
+.button-hide-show-menu:hover span:nth-child(1) {
+    top: 46%;
+    animation: rotateAnimationLeft45 0.6s alternate ease-in-out infinite;
+}
+@keyframes rotateAnimationLeft45 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+.button-hide-show-menu span:nth-child(2) {
+    transform: rotate(0deg);
+}
+.button-hide-show-menu:hover span:nth-child(2) {
+    opacity: 0;
+}
+
+.button-hide-show-menu span:nth-child(3) {
+    transform: rotate(0deg);
+    top: 66%;
+    transition: top 0.3s ease-in-out;
+}
+
+.button-hide-show-menu:hover span:nth-child(3) {
+    top: 46%;
+    animation: rotateAnimationRight45 0.6s alternate ease-in-out infinite;
+}
+
+@keyframes rotateAnimationRight45 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
 }

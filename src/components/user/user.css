@@ -1,0 +1,26 @@
+.user {
+    border: 1px solid var(--borderSkin);
+    border-radius: 10px;
+    width: 90px;
+    height: 90px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.user svg {
+    margin-top: 4px;
+    height: 80%;
+    fill: var(--borderSkin);
+}
+
+.user p {
+    position: absolute;
+    bottom: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--borderSkin);
+    color: var(--backgroundColorSkin);
+    border-radius: 10px;
+    padding: 2px 9px;
+}

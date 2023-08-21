@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Skin from "./skin/skin";
 import { getData } from "../local_storage/local_storage";
+import User from "./user/user";
 
 function App() {
     const [skinStyle, setSkinStyle] = useState(getData("skinStyle"));
+    const [HideShowMenu, setHideShowMenu] = useState(true);
 
     useEffect(() => {
         // Обновляем состояние при изменении данных в локальном хранилище
@@ -12,27 +14,41 @@ function App() {
         setSkinStyle(updatedSkinStyle);
 
         // Выводим данные в консоль при изменении
-        console.log(updatedSkinStyle, "App - Updated Skin Style");
+        // console.log(updatedSkinStyle, "App - Updated Skin Style");
     }, []);
 
-    console.log(getData("skinStyle"), "App");
+    // console.log(getData("skinStyle"), "App");
+    // todo--------------скрыть показать мню
+    function handleHideShowMenuClick() {
+        setHideShowMenu((prevState) => !prevState);
+    }
 
     return (
         <div className={`App ${skinStyle}`}>
             <div className="App-content">
-                <Skin />
-
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <button
+                    className="button-hide-show-menu"
+                    onClick={handleHideShowMenuClick}
                 >
-                    Learn React
-                </a>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div
+                    className={`App-content__user ${
+                        HideShowMenu ? "" : "hidden"
+                    }`}
+                >
+                    <User />
+                    <Skin />
+                </div>
+
+                <div
+                    className={`App-content__navigation ${
+                        HideShowMenu ? "" : "hidden"
+                    }`}
+                ></div>
             </div>
         </div>
     );
