@@ -3,6 +3,7 @@ import "./App.css";
 
 import { getData } from "../local_storage/local_storage";
 import User from "./user/user";
+import SkillMap from "./skill_map/skill_map";
 
 function App() {
     const [skinStyle, setSkinStyle] = useState(getData("skinStyle"));
@@ -48,6 +49,9 @@ function App() {
                         HideShowMenu ? "" : "hidden"
                     }`}
                 ></div>
+                <div className="window-skill-map">
+                    <SkillMap />
+                </div>
             </div>
         </div>
     );

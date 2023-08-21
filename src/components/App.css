@@ -140,3 +140,8 @@
         transform: rotate(45deg);
     }
 }
+
+.window-skill-map {
+    height: 100vh;
+    width: 100vw;
+}

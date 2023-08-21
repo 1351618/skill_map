@@ -1,0 +1,28 @@
+{
+    "user": {
+        "id": "kozhemuakinsergeiigorevich16081984",
+        "start": {
+            "data": "10.08.2023"
+        },
+        "programming": {
+            "python": {
+                "data": "10.08.2023",
+                "variables": "20%"
+            },
+            "javaSkript": {
+                "data": "10.08.2023",
+                "variables": "20%"
+            }
+        },
+        "mathematics": {
+            "Основы": {
+                "data": "10.08.2023",
+                "variables": "20%"
+            },
+            "Алгебра": {
+                "data": "10.08.2023",
+                "variables": "20%"
+            }
+        }
+    }
+}
