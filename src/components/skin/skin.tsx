@@ -1,11 +1,13 @@
-// ! skinStyle.tsx
+// todo skinStyle.tsx
 
 import React, { useState, useEffect } from "react";
 import "./skin.css";
 import { saveData, getData } from "../../local_storage/local_storage";
 
 function Skin() {
-    const [inputChecked, setInputChecked] = useState(getData("skinStyle"));
+    const [inputChecked, setInputChecked] = useState(() =>
+        getData("skinStyle")
+    );
     // При первой загрузке страницы, если в локальном хранилище нет значения, установите значение по умолчанию
     useEffect(() => {
         const storedSkinStyle = getData("skinStyle");

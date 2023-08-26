@@ -98,10 +98,6 @@
     gap: 10px;
 }
 
-.hiden {
-    display: none;
-}
-
 @keyframes blinc {
     0% {
     }

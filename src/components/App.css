@@ -43,6 +43,11 @@
     overflow: hidden;
     position: relative;
 }
+
+.hiden {
+    display: none;
+}
+
 /* *  *  *  *  * меню *  *  *  *   */
 .App-content__user {
     position: absolute;

@@ -1,24 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-
 import { getData } from "../local_storage/local_storage";
 import User from "./user/user";
 import SkillMap from "./skill_map/skill_map";
+import SplashScreen from "./splash_screen/splash_screen";
 
 function App() {
     const [skinStyle, setSkinStyle] = useState(getData("skinStyle"));
     const [HideShowMenu, setHideShowMenu] = useState(true);
 
-    useEffect(() => {
-        // Обновляем состояние при изменении данных в локальном хранилище
-        const updatedSkinStyle = getData("skinStyle");
-        setSkinStyle(updatedSkinStyle);
-
-        // Выводим данные в консоль при изменении
-        // console.log(updatedSkinStyle, "App - Updated Skin Style");
-    }, []);
-
-    // console.log(getData("skinStyle"), "App");
     // todo--------------скрыть показать мню
     function handleHideShowMenuClick() {
         setHideShowMenu((prevState) => !prevState);
@@ -49,8 +39,11 @@ function App() {
                         HideShowMenu ? "" : "hidden"
                     }`}
                 ></div>
-                <div className="window-skill-map">
+                <div className="window-skill-map hiden">
                     <SkillMap />
+                </div>
+                <div className="App-content__splash-screen">
+                    <SplashScreen />
                 </div>
             </div>
         </div>

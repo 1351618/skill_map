@@ -5,8 +5,8 @@ import LoginVia from "./login_via/login_via";
 
 function LoginMenu() {
     // const [isUserWindow, setUserWindow] = useState("log-in");
-    const [isUserWindow, setUserWindow] = useState("register");
-    // const [isUserWindow, setUserWindow] = useState("profile");
+    // const [isUserWindow, setUserWindow] = useState("register");
+    const [isUserWindow, setUserWindow] = useState("profile");
     return (
         <div className="login-menu">
             <div
