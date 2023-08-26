@@ -29,7 +29,7 @@ function Skin() {
         <div className="skin">
             <h1>ТЕМА</h1>
 
-            <p>класическая</p>
+            <p>классическая</p>
             <section>
                 <label htmlFor="">темная</label>
                 <input
