@@ -8,11 +8,22 @@ import SplashScreen from "./splash_screen/splash_screen";
 function App() {
     const [skinStyle, setSkinStyle] = useState(getData("skinStyle"));
     const [HideShowMenu, setHideShowMenu] = useState(true);
+    const [isHidenScreensaver, setHidenScreensaver] = useState(true);
 
     // todo--------------скрыть показать мню
     function handleHideShowMenuClick() {
         setHideShowMenu((prevState) => !prevState);
     }
+
+    //todo скрытие заставки
+    useEffect(() => {
+        const profileData = JSON.parse(localStorage.getItem("currentUser")!);
+        if (profileData) {
+            setHidenScreensaver(false);
+        } else {
+            setHidenScreensaver(true);
+        }
+    }, []);
 
     return (
         <div className={`App ${skinStyle}`}>
@@ -39,10 +50,14 @@ function App() {
                         HideShowMenu ? "" : "hidden"
                     }`}
                 ></div>
-                <div className="window-skill-map hiden">
+                <div className="window-skill-map hidden">
                     <SkillMap />
                 </div>
-                <div className="App-content__splash-screen">
+                <div
+                    className={`App-content__splash-screen ${
+                        isHidenScreensaver ? "" : "hidden"
+                    }`}
+                >
                     <SplashScreen />
                 </div>
             </div>

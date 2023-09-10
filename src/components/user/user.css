@@ -6,6 +6,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .user__account svg {

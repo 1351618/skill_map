@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import "./splash_screen.css";
 import Fon1 from "./fon_1.png";
-import Fon2 from "./fon_2.jpg";
+import Fon2 from "./fon_2.png";
 import Fon3 from "./fon_3.png";
 
 function SplashScreen() {
@@ -39,7 +39,7 @@ function SplashScreen() {
             const maxX = Math.floor(window.innerWidth / 2);
             const maxY = Math.floor(window.innerHeight / 2);
             setDisplaySize({ maxX, maxY });
-            console.log("Display size:", maxX, maxY);
+            // console.log("Display size:", maxX, maxY);
         };
         updateDisplaySize(); // Обновляем размер дисплея при монтировании компонента
         window.addEventListener("resize", updateDisplaySize); // Добавляем слушатель события изменения размера окна
