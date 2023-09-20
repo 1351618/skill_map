@@ -1,12 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import "./App.css";
 import { getData } from "../local_storage/local_storage";
 import User from "./user/user";
 import SkillMap from "./skill_map/skill_map";
 import SplashScreen from "./splash_screen/splash_screen";
+//! редукс толкит ''''''''''''''''''''''''''''''''''''''''\
+import { useSelector } from "react-redux";
+//! редукс толкит ......................................../
 
 function App() {
+    //! редукс толкит ''''''''''''''''''''''''''''''''''''''''\
+    const todos = useSelector((state: any) => state.todos.todos);
+    useEffect(() => {
+        // console.log(todos, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        setSkinStyle(todos);
+    }, [todos]);
+    //! редукс толкит ......................................../
+
     const [skinStyle, setSkinStyle] = useState(getData("skinStyle"));
+
     const [HideShowMenu, setHideShowMenu] = useState(true);
     const [isHidenScreensaver, setHidenScreensaver] = useState(true);
 
