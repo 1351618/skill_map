@@ -17,7 +17,7 @@
     border: var(--mainBorder);
     border-radius: 10px;
     background-color: var(--backgroundColor);
-    overflow: hidden;
+    // overflow: hidden;
   }
 }
 .sectionPersonalArea {
@@ -38,7 +38,26 @@
   bottom: 0;
   left: 0;
   width: 100px;
+  transition: transform 0.3s ease-in-out;
+  &.show {
+    transform: translateX(-100px);
+  }
+  > button {
+    position: absolute;
+    right: -28px;
+    top: 0;
+    background-color: unset;
+    border: none;
+    img {
+      height: 24px;
+    }
+  }
 }
+
+// .show {
+//   opacity: 0;
+// }
+
 .sectionBtnShowHideInterface {
   bottom: 0;
   left: 50%;
