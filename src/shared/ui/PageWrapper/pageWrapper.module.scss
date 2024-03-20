@@ -5,23 +5,47 @@
   padding-right: 20px;
 }
 .app {
-  border: 2px solid #eeff00;
   max-width: var(--maxContWidth);
   width: 100%;
   box-sizing: border-box;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  section {
+    position: absolute;
+    border: var(--mainBorder);
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+    overflow: hidden;
+  }
 }
-
-.header__inner {
-  // min-height: 100px;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-
-  //   background-color: var(--backgroundColor);
+.sectionPersonalArea {
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+}
+.sectionMiniNavBar {
+  bottom: 0;
+  left: 50%;
+  height: 50px;
+  width: 400px;
+  transform: translateX(-50%);
+}
+.sectionBoxSettings {
+  top: 110px;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+}
+.sectionBtnShowHideInterface {
+  bottom: 0;
+  left: 50%;
+  height: 35px;
+  width: 50px;
+  transform: translateX(-50%);
+  z-index: 100;
 }
 
 .footer__inner {
