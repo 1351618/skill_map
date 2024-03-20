@@ -22,7 +22,7 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
       </main>
       <section
         className={`${cls.sectionBoxSettings} ${
-          isSettingsShow ? cls.show : ""
+          isSettingsShow ? "" : cls.show
         }`}
       >
         <button
