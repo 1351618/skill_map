@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next";
 import cls from "./boxSettings.module.scss";
 import { useTheme } from "../../../app/providers/themeProvider/lib/useTheme";
 import { useState } from "react";
+import dayAndNightSvg from "./day_and_night.svg";
+import languageSvg from "./language.svg";
 
 export const BoxSettings = () => {
   const { changeTheme } = useTheme();
@@ -17,14 +19,18 @@ export const BoxSettings = () => {
   };
   return (
     <div className={cls.boxSettings}>
-      <button onClick={changeTheme}>{t("Change theme")}</button>
+      {/* <button onClick={changeTheme}>{t("Change theme")}</button> */}
+      <button onClick={changeTheme}>
+        <img src={dayAndNightSvg} alt="" />
+      </button>
       <button
         onClick={() => {
           toggle();
           setCounter((prev) => prev + 1);
         }}
       >
-        {t("Change language")}
+        {/* {t("Change language")} */}
+        <img src={languageSvg} alt="" />
       </button>
     </div>
   );

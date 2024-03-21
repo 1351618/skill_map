@@ -1,8 +1,19 @@
 .boxSettings {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   padding-top: 5px;
   gap: 4px;
+  flex-wrap: wrap;
+
+  button {
+    padding: 3px;
+    border-radius: 6px;
+    background-color: rgb(192 192 192 / 65%);
+    border: none;
+    img {
+      height: 24px;
+    }
+  }
 }
