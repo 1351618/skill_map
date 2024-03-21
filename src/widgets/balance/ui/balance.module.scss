@@ -1,0 +1,19 @@
+.balance {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bolder;
+  color: #00ff08;
+  text-shadow: 0px 0px 2px black, 0px 0px 4px black;
+  letter-spacing: 1px;
+
+  p {
+    font-size: 20px;
+  }
+  span {
+    font-size: 14px;
+  }
+}

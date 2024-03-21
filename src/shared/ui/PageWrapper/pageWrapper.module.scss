@@ -14,10 +14,12 @@
   justify-content: space-between;
   section {
     position: absolute;
-    border: var(--mainBorder);
+    // border: var(--mainBorder);
     border-radius: 10px;
     background-color: var(--backgroundColor);
     // overflow: hidden;
+    box-shadow: 1px 1px 2px #000, 1px 1px 4px #000, inset -1px -1px 4px #000,
+      -1px -1px 2px #fff, -1px -1px 4px #fff, inset 1px 1px 4px #fff;
   }
 }
 .sectionPersonalArea {
@@ -25,22 +27,46 @@
   left: 0;
   height: 100px;
   width: 100px;
+  transition: transform 0.3s ease-in-out;
+  transform: translate(-90%, 0%);
+  &.showInterface {
+    transform: translate(0%, 0%);
+  }
+}
+
+.sectionBalance {
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 100px;
+  transition: transform 0.3s ease-in-out;
+  transform: translate(0%, -90%);
+  &.showInterface {
+    transform: translate(0%, 0%);
+  }
 }
 .sectionMiniNavBar {
   bottom: 0;
   left: 50%;
   height: 50px;
   width: 400px;
-  transform: translateX(-50%);
+  transition: transform 0.3s ease-in-out;
+  transform: translate(-50%, 80%);
+  &.showInterface {
+    transform: translate(-50%, 0%);
+  }
 }
 .sectionBoxSettings {
-  top: 110px;
+  top: 104px;
   bottom: 0;
   left: 0;
   width: 100px;
   transition: transform 0.3s ease-in-out;
-  &.show {
-    transform: translateX(-100px);
+  // &.showInterface {
+  //   transform: translateX(-100px);
+  // }
+  &.showSettings {
+    transform: translate(-100px, 0%);
   }
   > button {
     position: absolute;
@@ -54,9 +80,13 @@
   }
 }
 
-// .show {
-//   opacity: 0;
-// }
+.btnShowHideInterface {
+  height: 100%;
+  width: 100%;
+  background-color: unset;
+  border: none;
+  color: var(--color);
+}
 
 .sectionBtnShowHideInterface {
   bottom: 0;
