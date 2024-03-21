@@ -7,7 +7,7 @@ import languageSvg from "./language.svg";
 
 export const BoxSettings = () => {
   const { changeTheme } = useTheme();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [counter, setCounter] = useState(0);
   const languagesArray = ["ru", "en", "cn"];
 
