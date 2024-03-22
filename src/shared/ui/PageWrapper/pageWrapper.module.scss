@@ -10,16 +10,16 @@
   box-sizing: border-box;
   height: 100%;
   display: flex;
+
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   section {
     position: absolute;
-    // border: var(--mainBorder);
     border-radius: 10px;
+
     background-color: var(--backgroundColor);
-    // overflow: hidden;
-    box-shadow: 1px 1px 2px #000, 1px 1px 4px #000, inset -1px -1px 4px #000,
-      -1px -1px 2px #fff, -1px -1px 4px #fff, inset 1px 1px 4px #fff;
+    box-shadow: var(--mainBoxShadow);
   }
 }
 .sectionPersonalArea {
@@ -29,6 +29,7 @@
   width: 100px;
   transition: transform 0.3s ease-in-out;
   transform: translate(-90%, 0%);
+  z-index: 100;
   &.showInterface {
     transform: translate(0%, 0%);
   }
@@ -38,23 +39,54 @@
   top: 0;
   right: 0;
   height: 50px;
-  width: 100px;
+  // width: 100px;
   transition: transform 0.3s ease-in-out;
   transform: translate(0%, -90%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
   &.showInterface {
     transform: translate(0%, 0%);
   }
 }
+.keyShort {
+  z-index: 100;
+  padding: 3px;
+  border-radius: 10px;
+  background-color: var(--backgroundColor);
+  box-shadow: var(--mainBoxShadow);
+  border: none;
+  color: var(--color);
+
+  &:active {
+    box-shadow: var(--BoxShadowActivBtn);
+  }
+  img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
 .sectionMiniNavBar {
   bottom: 0;
   left: 50%;
   height: 50px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   transition: transform 0.3s ease-in-out;
   transform: translate(-50%, 80%);
+  z-index: 100;
   &.showInterface {
     transform: translate(-50%, 0%);
   }
+}
+
+.sectionMain {
+  max-height: 98%;
+  max-width: 98%;
+  z-index: 50;
 }
 .sectionBoxSettings {
   top: 104px;
@@ -62,12 +94,16 @@
   left: 0;
   width: 100px;
   transition: transform 0.3s ease-in-out;
-  // &.showInterface {
-  //   transform: translateX(-100px);
-  // }
-  &.showSettings {
-    transform: translate(-100px, 0%);
+  z-index: 100;
+
+  &:not(.showInterface) {
+    display: none;
   }
+
+  &.showSettings {
+    transform: translateX(-100px);
+  }
+
   > button {
     position: absolute;
     right: -28px;
@@ -81,27 +117,20 @@
 }
 
 .btnShowHideInterface {
-  height: 100%;
-  width: 100%;
-  background-color: unset;
+  position: absolute;
+  border-radius: 10px;
+  background-color: var(--backgroundColor);
+  box-shadow: var(--mainBoxShadow);
   border: none;
   color: var(--color);
-}
-
-.sectionBtnShowHideInterface {
   bottom: 0;
   left: 50%;
   height: 35px;
   width: 50px;
   transform: translateX(-50%);
   z-index: 100;
-}
 
-.footer__inner {
-  display: flex;
-  justify-content: var(--color);
-  align-items: center;
-  min-height: 140px;
-  padding: 30px 0;
-  background-color: beige;
+  &:active {
+    box-shadow: var(--BoxShadowActivBtn);
+  }
 }

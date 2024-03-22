@@ -2,8 +2,7 @@ import { useTranslation } from "react-i18next";
 import cls from "./boxSettings.module.scss";
 import { useTheme } from "../../../app/providers/themeProvider/lib/useTheme";
 import { useState } from "react";
-import dayAndNightSvg from "./day_and_night.svg";
-import languageSvg from "./language.svg";
+import { dayAndNightSvg, languageSvg } from "../../../app/images/images";
 
 export const BoxSettings = () => {
   const { changeTheme } = useTheme();
