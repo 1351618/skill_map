@@ -3,6 +3,7 @@ import cls from "./boxSettings.module.scss";
 import { useTheme } from "../../../app/providers/themeProvider/lib/useTheme";
 import { useState } from "react";
 import { dayAndNightSvg, languageSvg } from "../../../app/images/images";
+import { BtnSound } from "../../../shared/buttons/btnSound/BtnSound";
 
 export const BoxSettings = () => {
   const { changeTheme } = useTheme();
@@ -31,6 +32,7 @@ export const BoxSettings = () => {
         {/* {t("Change language")} */}
         <img src={languageSvg} alt="" />
       </button>
+      <BtnSound />
     </div>
   );
 };

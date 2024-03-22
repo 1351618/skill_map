@@ -1,11 +1,10 @@
 .boxSettings {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  padding: 8px;
   gap: 4px;
-  flex-wrap: wrap;
+  justify-items: center;
 
   button {
     padding: 3px;
