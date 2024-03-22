@@ -95,6 +95,9 @@
   width: 100px;
   transition: transform 0.3s ease-in-out;
   z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &:not(.showInterface) {
     display: none;

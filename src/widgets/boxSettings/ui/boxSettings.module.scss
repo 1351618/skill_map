@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  padding: 8px;
-  gap: 4px;
+  padding: 10px;
+  gap: 10px;
+  width: min-content;
   justify-items: center;
 
   button {

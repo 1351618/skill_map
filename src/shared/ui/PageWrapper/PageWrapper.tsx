@@ -4,7 +4,12 @@ import { PersonalArea } from "../../../widgets/personalArea/ui/PersonalArea";
 import { MiniNavBar } from "../../../widgets/miniNavBar/ui/MiniNavBar";
 import { BoxSettings } from "../../../widgets/boxSettings/ui/BoxSettings";
 import { Balance } from "../../../widgets/balance/ui/Balance";
-import { keyShortSvg, settingsSvg } from "../../../app/images/images";
+import {
+  aboutSvg,
+  keyShortSvg,
+  questionSvg,
+  settingsSvg,
+} from "../../../app/images/images";
 
 export const PageWrapper = ({ children }: { children: ReactNode }) => {
   const [isSettingsShow, setSettingsShow] = useState(false);
@@ -18,7 +23,13 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
       </section>
       <section className={`${cls.sectionBalance} ${ShowInterface}`}>
         <button className={cls.keyShort}>
-          <img src={keyShortSvg} alt="" />
+          <img src={keyShortSvg} alt="keyShort alt+q+p+n" />
+        </button>
+        <button className={cls.keyShort}>
+          <img src={questionSvg} alt="question" />
+        </button>
+        <button className={cls.keyShort}>
+          <img src={aboutSvg} alt="about" />
         </button>
         <Balance />
       </section>
