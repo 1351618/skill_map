@@ -11,7 +11,7 @@ import {
   settingsSvg,
 } from "../../../app/images/images";
 import { BtnShowHideInterface } from "../../buttons/btnShowHideInterface/BtnShowHideInterface";
-import { TrainingWindow } from "../../../widgets/trainingWindow/ui/TrainingWindow";
+// import { TrainingWindow } from "../../../widgets/trainingWindow/ui/TrainingWindow";
 // import { AboutDel } from "../../../widgets/Del/AboutDel";
 // import { RegistrationDel } from "../../../widgets/Del/registration";
 
@@ -43,10 +43,10 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
       <section className={`${cls.sectionMain} ${ShowInterface}`}>
         {/* <AboutDel /> */}
         {/* <RegistrationDel /> */}
-        <TrainingWindow />
-        {/* <main className="main">
+        {/* <TrainingWindow /> */}
+        <main className="main">
           <div className="Home__inner">{children}</div>
-        </main> */}
+        </main>
       </section>
       <section
         className={`${cls.sectionBoxSettings} ${
