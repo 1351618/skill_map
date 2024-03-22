@@ -1,15 +1,19 @@
 import cls from "./pageWrapper.module.scss";
 import { ReactNode, useState } from "react";
-import { PersonalArea } from "../../../widgets/personalArea/ui/PersonalArea";
+import { Balance } from "../../../widgets/balance/ui/Balance";
 import { MiniNavBar } from "../../../widgets/miniNavBar/ui/MiniNavBar";
 import { BoxSettings } from "../../../widgets/boxSettings/ui/BoxSettings";
-import { Balance } from "../../../widgets/balance/ui/Balance";
+import { PersonalArea } from "../../../widgets/personalArea/ui/PersonalArea";
 import {
   aboutSvg,
   keyShortSvg,
   questionSvg,
   settingsSvg,
 } from "../../../app/images/images";
+import { BtnShowHideInterface } from "../../buttons/btnShowHideInterface/BtnShowHideInterface";
+import { TrainingWindow } from "../../../widgets/trainingWindow/ui/TrainingWindow";
+// import { AboutDel } from "../../../widgets/Del/AboutDel";
+// import { RegistrationDel } from "../../../widgets/Del/registration";
 
 export const PageWrapper = ({ children }: { children: ReactNode }) => {
   const [isSettingsShow, setSettingsShow] = useState(false);
@@ -37,9 +41,12 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
         <MiniNavBar />
       </section>
       <section className={`${cls.sectionMain} ${ShowInterface}`}>
-        <main className="main">
+        {/* <AboutDel /> */}
+        {/* <RegistrationDel /> */}
+        <TrainingWindow />
+        {/* <main className="main">
           <div className="Home__inner">{children}</div>
-        </main>
+        </main> */}
       </section>
       <section
         className={`${cls.sectionBoxSettings} ${
@@ -56,14 +63,11 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
 
         <BoxSettings />
       </section>
-      <button
-        className={cls.btnShowHideInterface}
-        onClick={() => {
-          setShowHideInterface(!isShowHideInterface);
-        }}
-      >
-        X
-      </button>
+
+      <BtnShowHideInterface
+        is={isShowHideInterface}
+        set={setShowHideInterface}
+      />
     </div>
   );
 };

@@ -1,0 +1,26 @@
+.trainingWindow {
+  height: 98vh;
+  width: 98vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  div {
+    border: 2px solid #eeff00;
+  }
+}
+
+.videoW {
+  grid-area: 1 / 1 / 2 / 4;
+}
+.resultW {
+  grid-area: 1 / 4 / 1 / 7;
+}
+.htmlW {
+  grid-area: 2 / 1 / 2 / 3;
+}
+.cssW {
+  grid-area: 2 / 3 / 2 / 5;
+}
+.jsW {
+  grid-area: 2 / 5 / 2 / 7;
+}
