@@ -1,3 +1,5 @@
+@import "../../../app/style/templates.scss";
+
 .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -52,21 +54,7 @@
   }
 }
 .keyShort {
-  z-index: 100;
-  padding: 3px;
-  border-radius: 10px;
-  background-color: var(--backgroundColor);
-  box-shadow: var(--mainBoxShadow);
-  border: none;
-  color: var(--color);
-
-  &:active {
-    box-shadow: var(--BoxShadowActivBtn);
-  }
-  img {
-    width: 22px;
-    height: 22px;
-  }
+  @include btn-1;
 }
 
 .sectionMiniNavBar {
@@ -120,12 +108,9 @@
 }
 
 .btnShowHideInterface {
+  @include btn-1;
   position: absolute;
-  border-radius: 10px;
-  background-color: var(--backgroundColor);
-  box-shadow: var(--mainBoxShadow);
-  border: none;
-  color: var(--color);
+
   bottom: 0;
   left: 50%;
   height: 35px;
@@ -135,5 +120,6 @@
 
   &:active {
     box-shadow: var(--BoxShadowActivBtn);
+    transform: translate(-51%, 1px);
   }
 }

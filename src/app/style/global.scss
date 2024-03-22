@@ -1,5 +1,6 @@
 @import "./themes/dark.scss";
 @import "./themes/light.scss";
+@import "./templates.scss";
 
 * {
   margin: 0;
@@ -29,11 +30,9 @@ button {
 }
 :root {
   --mainBorder: 2px solid #848484;
-  --mainBoxShadow: 1px 1px 1px #000, 1px 1px 2px #000, inset -1px -1px 4px #000,
-    -1px -1px 1px #fff, -1px -1px 2px #fff, inset 1px 1px 4px #fff;
-  --BoxShadowActivBtn: 1px 1px 1px #bcbcbc, 1px 1px 2px #000,
-    inset -1px -1px 4px #bcbcbc, -1px -1px 1px #000, -1px -1px 2px #000,
-    inset 1px 1px 4px #bcbcbc;
+  --mainBoxShadow: 1px 1px 4px #92929287, 1px 1px 10px #797979b3,
+    inset -5px -5px 10px #00000040, -1px -1px 1px #ffffff94,
+    -1px -1px 2px #ffffff87, inset 4px 5px 10px #ffffff36;
 }
 
 body {

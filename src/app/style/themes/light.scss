@@ -1,4 +1,12 @@
 .app_light_theme {
   --backgroundColor: #f8f8f8;
   --color: #000;
+  --btn_1_box-shadow: inset 0 5px 1px rgba(255, 255, 255, 0.35),
+    0 5px 5px rgba(255, 255, 255, 0.5), 0 15px 25px rgba(255, 255, 255, 0.35);
+  --btn_1_background: linear-gradient(0deg, #b6b6b6, #b6b6b6, #cecece);
+  --btn_1_border-top: 2px solid #ffffff;
+  --btn_1_color: #4b4b4b;
+  --BoxShadowActivBtn: 1px 1px 1px #bcbcbc, 1px 1px 2px #000000b0,
+    inset -1px -1px 2px #bcbcbc, -1px -1px 1px #000, -1px -1px 2px #000,
+    inset 1px 1px 2px #bcbcbc;
 }

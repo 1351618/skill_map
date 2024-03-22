@@ -1,3 +1,4 @@
+@import "../../../app/style/templates.scss";
 .boxSettings {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -8,19 +9,6 @@
   justify-items: center;
 
   button {
-    padding: 3px;
-    border-radius: 6px;
-    background-color: rgb(192 192 192 / 65%);
-    border: none;
-    box-shadow: var(--mainBoxShadow);
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-
-    &:active {
-      transform: translateY(2px);
-      box-shadow: var(--BoxShadowActivBtn);
-    }
-    img {
-      height: 24px;
-    }
+    @include btn-1;
   }
 }
