@@ -106,3 +106,17 @@
     }
   }
 }
+
+.sectionBtnShowHideInterface {
+  bottom: 0;
+  left: 50%;
+  height: 35px;
+  width: 50px;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  &:active {
+    box-shadow: var(--BoxShadowActivBtn);
+    transform: translate(-51%, 1px);
+  }
+}

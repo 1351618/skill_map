@@ -63,11 +63,12 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
 
         <BoxSettings />
       </section>
-
-      <BtnShowHideInterface
-        is={isShowHideInterface}
-        set={setShowHideInterface}
-      />
+      <section className={cls.sectionBtnShowHideInterface}>
+        <BtnShowHideInterface
+          is={isShowHideInterface}
+          set={setShowHideInterface}
+        />
+      </section>
     </div>
   );
 };
