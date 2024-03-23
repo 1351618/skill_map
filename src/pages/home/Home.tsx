@@ -1,14 +1,15 @@
-import { useCallback } from "react";
-import ReactFlow, { useNodesState, useEdgesState, addEdge } from "reactflow";
+import { useCallback } from 'react';
+import ReactFlow, { useNodesState, useEdgesState, addEdge } from 'reactflow';
 
-import "reactflow/dist/style.css";
-import { PageWrapper } from "../../shared/ui/PageWrapper/PageWrapper";
+import 'reactflow/dist/style.css';
+import { PageWrapper } from '../../shared/ui/PageWrapper/PageWrapper';
 
 const initialNodes = [
-  { id: "1", position: { x: 100, y: 0 }, data: { label: "10.08.24" } },
-  { id: "2", position: { x: 100, y: 100 }, data: { label: "+" } },
+  { id: '1', position: { x: 100, y: 0 }, data: { label: '10.08.24' } },
+  { id: '2', position: { x: 100, y: 100 }, data: { label: '+' } },
 ];
-const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
+
+const initialEdges = [{ id: 'e1-2', source: '1', target: '2' }];
 
 export const Home = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
@@ -21,7 +22,7 @@ export const Home = () => {
   setNodes;
   return (
     <PageWrapper>
-      <div style={{ width: "500px", height: "500px" }}>
+      <div style={{ width: '500px', height: '500px' }}>
         Home
         <ReactFlow
           nodes={nodes}
