@@ -1,0 +1,81 @@
+.registration {
+  z-index: 116;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    330deg,
+    rgba(0, 0, 0, 0.7019607843),
+    rgba(0, 0, 0, 0.4705882353)
+  );
+  backdrop-filter: blur(6px);
+  -webkit-backddrop-filter: blur(6px);
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 55px #00000094, inset 0px 0px 143px #0000006b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registrationContent {
+  border: 1px solid #929292;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.41), 5px 2px 27px rgba(0, 0, 0, 0.49);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  button {
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 24px;
+    background-color: unset;
+    color: var(--color);
+  }
+}
+
+.inputBox {
+  position: relative;
+  width: 310px;
+  height: 40px;
+  margin: 30px 0;
+  border-bottom: 2px solid var(--color);
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    transform: translateY(80%);
+    font-size: 1em;
+    // color: aqua;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+  input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    padding: 0 30px 0 10px;
+    font-weight: bold;
+    color: var(--color);
+    letter-spacing: 1px;
+
+    &:focus ~ label,
+    &:valid ~ label {
+      top: -25px;
+    }
+  }
+  span {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    line-height: 45px;
+  }
+}

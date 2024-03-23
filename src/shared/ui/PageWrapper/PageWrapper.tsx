@@ -11,9 +11,6 @@ import {
   settingsSvg,
 } from "../../../app/images/images";
 import { BtnShowHideInterface } from "../../buttons/btnShowHideInterface/BtnShowHideInterface";
-// import { TrainingWindow } from "../../../widgets/trainingWindow/ui/TrainingWindow";
-// import { AboutDel } from "../../../widgets/Del/AboutDel";
-// import { RegistrationDel } from "../../../widgets/Del/registration";
 
 export const PageWrapper = ({ children }: { children: ReactNode }) => {
   const [isSettingsShow, setSettingsShow] = useState(false);
@@ -41,9 +38,6 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
         <MiniNavBar />
       </section>
       <section className={`${cls.sectionMain} ${ShowInterface}`}>
-        {/* <AboutDel /> */}
-        {/* <RegistrationDel /> */}
-        {/* <TrainingWindow /> */}
         <main className="main">
           <div className="Home__inner">{children}</div>
         </main>
