@@ -18,7 +18,6 @@ export const routeList: RouteObject[] = [
     path: '/about/privacy_policy',
     element: <PrivacyPolicy />,
   },
-
   {
     path: '/*',
     element: (() => {

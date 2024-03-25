@@ -5,13 +5,12 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(
-    330deg,
-    rgba(0, 0, 0, 0.7019607843),
-    rgba(0, 0, 0, 0.4705882353)
-  );
-  backdrop-filter: blur(6px);
-  -webkit-backddrop-filter: blur(6px);
+  background: linear-gradient(330deg,
+      rgba(0, 0, 0, 0.7019607843),
+      rgba(0, 0, 0, 0.4705882353));
+  backdrop-filter: 6px;
+  -webkit-backddrop-filter: var(--transparency);
+  // filter: (10px);
   border-radius: 6px;
   box-shadow: inset 0px 0px 55px #00000094, inset 0px 0px 143px #0000006b;
   display: flex;
@@ -28,6 +27,7 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+
   button {
     width: 100%;
     height: 40px;
@@ -55,6 +55,7 @@
     pointer-events: none;
     transition: 0.3s;
   }
+
   input {
     width: 100%;
     height: 50px;
@@ -67,15 +68,47 @@
     color: var(--color);
     letter-spacing: 1px;
 
-    &:focus ~ label,
-    &:valid ~ label {
+    &:focus~label,
+    &:valid~label {
       top: -25px;
     }
   }
+
   span {
     position: absolute;
     right: 8px;
     font-size: 1.2em;
     line-height: 45px;
   }
+}
+
+
+.registration {
+
+  background: linear-gradient(330deg,
+      rgba(0, 0, 0, 0.7019607843),
+      rgba(0, 0, 0, 0.4705882353));
+  position: relative;
+}
+
+.registration:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: var(--transparency);
+  -webkit-backdrop-filter: var(--transparency)
+}
+
+.registrationContent {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+
+.registration:before {
+  content: '';
+  position: absolute;
+  backdrop-filter: var(--transparency);
+  -webkit-backdrop-filter: var(--transparency)
 }

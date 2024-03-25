@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -25,14 +26,17 @@ h3 {
   margin: 0;
   font-weight: normal;
 }
+
 button {
   cursor: pointer;
 }
+
 :root {
   --mainBorder: 2px solid #848484;
   --mainBoxShadow: 1px 1px 4px #92929287, 1px 1px 10px #797979b3,
     inset -5px -5px 10px #00000040, -1px -1px 1px #ffffff94,
     -1px -1px 2px #ffffff87, inset 4px 5px 10px #ffffff36;
+  --transparency: blur(6px)
 }
 
 body {
@@ -47,6 +51,7 @@ body {
   border: var(--mainBorder);
   position: relative;
 }
+
 #root {
   width: 100%;
   height: 100%;
