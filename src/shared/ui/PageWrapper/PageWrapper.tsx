@@ -9,17 +9,13 @@ import {
   keyShortSvg,
   questionSvg,
   settingsSvg,
-} from "../../../app/images/images";
+} from "../../assets/images/images";
 import { BtnShowHideInterface } from "../../buttons/btnShowHideInterface/BtnShowHideInterface";
-// import { Registration } from "../../../widgets/registration/ui/Registration";
 
 export const PageWrapper = ({ children }: { children: ReactNode }) => {
   const [isSettingsShow, setSettingsShow] = useState(false);
   const [isShowHideInterface, setShowHideInterface] = useState(true);
   const ShowInterface = isShowHideInterface ? cls.showInterface : "";
-  const [modal, setModal] = useState<"info" | "game" | "main">("main");
-  const boolForgame = modal === "game";
-  const boolForAbout = modal === "info";
 
   return (
     <div className={cls.app}>
@@ -27,13 +23,13 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
         <PersonalArea />
       </section>
       <section className={`${cls.sectionBalance} ${ShowInterface}`}>
-        <button onClick={() => setModal("game")} className={cls.keyShort}>
+        <button className={cls.keyShort}>
           <img src={keyShortSvg} alt="keyShort alt+q+p+n" />
         </button>
-        <button onClick={() => setModal("info")} className={cls.keyShort}>
+        <button className={cls.keyShort}>
           <img src={questionSvg} alt="question" />
         </button>
-        <button onClick={() => setModal("main")} className={cls.keyShort}>
+        <button className={cls.keyShort}>
           <img src={aboutSvg} alt="about" />
         </button>
         <Balance />
