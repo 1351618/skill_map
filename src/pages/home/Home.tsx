@@ -3,6 +3,7 @@ import ReactFlow, { useNodesState, useEdgesState, addEdge } from 'reactflow';
 
 import 'reactflow/dist/style.css';
 import { PageWrapper } from '../../shared/ui/PageWrapper/PageWrapper';
+import { CodeEditor } from '../../entities/codeEditor/ui/CodeEditor';
 
 const initialNodes = [
   { id: '1', position: { x: 100, y: 0 }, data: { label: '10.08.24' } },
@@ -23,14 +24,14 @@ export const Home = () => {
   return (
     <PageWrapper>
       <div style={{ width: '500px', height: '500px' }}>
-        Home
-        <ReactFlow
+        {/* <ReactFlow
           nodes={nodes}
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
-        />
+        /> */}
+        <CodeEditor />
       </div>
     </PageWrapper>
   );
