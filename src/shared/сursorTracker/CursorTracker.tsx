@@ -2,8 +2,8 @@ import React from "react";
 
 export const CursorTracker = () => {
   const handleMouseMove = (event: React.MouseEvent) => {
-    const { clientX, clientY } = event;
-    console.log("Координаты курсора:", clientX, clientY);
+    // const { clientX, clientY } = event;
+    // console.log("Координаты курсора:", clientX, clientY);
   };
 
   const styleCT: React.CSSProperties = {

@@ -11,7 +11,7 @@ import {
   settingsSvg,
 } from "../../../app/images/images";
 import { BtnShowHideInterface } from "../../buttons/btnShowHideInterface/BtnShowHideInterface";
-import { Registration } from "../../../widgets/registration/ui/Registration";
+// import { Registration } from "../../../widgets/registration/ui/Registration";
 
 export const PageWrapper = ({ children }: { children: ReactNode }) => {
   const [isSettingsShow, setSettingsShow] = useState(false);
@@ -23,9 +23,6 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
 
   return (
     <div className={cls.app}>
-      {/* <section className={cls.sectionRegistration}>
-        <Registration />
-      </section> */}
       <section className={`${cls.sectionPersonalArea} ${ShowInterface}`}>
         <PersonalArea />
       </section>
