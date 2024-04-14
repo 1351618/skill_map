@@ -38,9 +38,7 @@ export const PageWrapper = ({ children }: { children: ReactNode }) => {
         <MiniNavBar />
       </section>
       <section className={`${cls.sectionMain} ${ShowInterface}`}>
-        <main className="main">
-          <div className="Home__inner">{children}</div>
-        </main>
+        <main>{children}</main>
       </section>
       <section
         className={`${cls.sectionBoxSettings} ${
